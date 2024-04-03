@@ -77,6 +77,7 @@ export async function getBestRatedBooks() {
     return [];
   }
 }
+
 export async function deleteBook(id) {
   try {
     await axios.delete(`${API_ROUTES.BOOKS}/${id}`, {
