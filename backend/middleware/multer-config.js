@@ -9,8 +9,7 @@ const fileFilter = (req, file, callback) => {
     if (allowedTypes.includes(file.mimetype)) {
         callback(null, true);
     } else {
-        callback(null, false);
-        callback(new Error('Le fichier n\'est pas valide. Seuls les fichiers JPG, JPEG et PNG sont acceptés.'));
+        callback(new Error('Le fichier n\'est pas valide. Seuls les fichiers JPG, JPEG et PNG sont acceptés.'), false);
     }
 };
 
